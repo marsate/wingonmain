@@ -12,27 +12,27 @@ local OnOffDuty = MainStorage.Events.OnOffDuty
 local AddPoints = MainStorage.Events.AddPoints
 local AssignRoleEvent = MainStorage.Events.AssignRole
 
-local PlayerJoin = require(script.Player:WaitForChild("PlayerHandleJoin"))
-local PlayerHandleLeave = require(script.Player:WaitForChild("PlayerHandleLeave"))
-local OnOffDutyHandler = require(script.Player:WaitForChild("OnOffDuty"))
-local AssignRole = require(script.Player:WaitForChild("AssignRole"))
+local PlayerJoin = require(script.Parent.ModulePull.Player:WaitForChild("PlayerHandleJoin"))
+local PlayerHandleLeave = require(script.Parent.ModulePull.Player:WaitForChild("PlayerHandleLeave"))
+local OnOffDutyHandler = require(script.Parent.ModulePull.Player:WaitForChild("OnOffDuty"))
+local AssignRole = require(script.Parent.ModulePull.Player:WaitForChild("AssignRole"))
 
-local PlayerCollisions = require(script.Character:WaitForChild("PlayerCollisions"))
+local PlayerCollisions = require(script.Parent.ModulePull.Character:WaitForChild("PlayerCollisions"))
 
-local GivePoints = require(script.Points:WaitForChild("GiveAmount"))
+local GivePoints = require(script.Parent.ModulePull.Points:WaitForChild("GiveAmount"))
 
-local ChatListener = require(script.Commands:WaitForChild("ChatListener"))
+local ChatListener = require(script.Parent.ModulePull.Commands:WaitForChild("ChatListener"))
 
-local RunServiceServer = require(script.Map:WaitForChild("RunServiceServer"))
-local ClickToBuy = require(script.Map:WaitForChild("ClickToBuy"))
-local GameLeaderboards = require(script.Map:WaitForChild("GameLeaderboards"))
-local MusicPlayer = require(script.Map:WaitForChild("MusicPlayer"))
-local ServerShutdown = require(script.Map:WaitForChild("ServerShutdown"))
+local RunServiceServer = require(script.Parent.ModulePull.Map:WaitForChild("RunServiceServer"))
+local ClickToBuy = require(script.Parent.ModulePull.Map:WaitForChild("ClickToBuy"))
+local GameLeaderboards = require(script.Parent.ModulePull.Map:WaitForChild("GameLeaderboards"))
+local MusicPlayer = require(script.Parent.ModulePull.Map:WaitForChild("MusicPlayer"))
+local ServerShutdown = require(script.Parent.ModulePull.Map:WaitForChild("ServerShutdown"))
 
-local PlaceOrder = require(script.POS:WaitForChild("PlaceOrder"))
-local ClaimOrder = require(script.POS:WaitForChild("ClaimOrder"))
-local MainOrders = require(script.POS.Storage:WaitForChild("MainOrders"))
-local CompleteOrder = require(script.POS:WaitForChild("CompleteOrder"))
+local PlaceOrder = require(script.Parent.ModulePull.POS:WaitForChild("PlaceOrder"))
+local ClaimOrder = require(script.Parent.ModulePull.POS:WaitForChild("ClaimOrder"))
+local MainOrders = require(script.Parent.ModulePull.POS.Storage:WaitForChild("MainOrders"))
+local CompleteOrder = require(script.Parent.ModulePull.POS:WaitForChild("CompleteOrder"))
 
 Players.PlayerAdded:Connect(function(Player)
 	PlayerJoin.OnEventConnected(Player)
